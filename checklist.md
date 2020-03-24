@@ -7,24 +7,43 @@
 - [ ] Did you understand the context for the question and the scientific or business application?
 - [ ] Did you record the experimental design?
 - [ ] Did you consider whether the question could be answered with the available data?
+- [ ] What is the end deliverable going to look like (e.g., jupyter notebook, slides, deployable code)?
 
 ##  2. Checking the Data
 
 - [ ] Did you plot univariate and multivariate summaries of the data?
 - [ ] Did you check for outliers?
 - [ ] Did you identify the missing data code?
+- [ ] How many observations are there in total, and of each important class? Are the data imbalanced?
+- [ ] What data types are the data stored in? E.g., are dates, numbers stored as strings?
+
+### Helpful functions:
+```python
+# Pandas functions
+df.value_counts()
+df.value_counts(normalize=True) # gets the percentage of different value counts
+df.sample(50) # generates a random sample of 50 rows. Useful for checking your own intuition about data
+```
 
 ## 3. Cleaning the Data
 
 - [ ] Is each variable one column?
 - [ ] Is each observation one row?
-- [ ] Do different data types appear in each table?
+- [ ] Are there repeated observations?
+- [ ] Are the data types in the right format now?
 - [ ] Did you record the recipe for moving from raw to tidy data?
 - [ ] Did you record all parameters, units, and functions applied to the data?
 
+### Helpful functions:
+```python
+# Use assert statements to check whether there are any nulls left in specified columns:
+for colname in ['a','b','c']:
+	assert df.loc[df[colname].isnull()].shape[0]==0, 'Error! Nulls in {}'.format(colname)
+```
+
 ## 4. Exploratory Data Analysis
 
-- [ ] Did you identify missing values?
+- [ ] Did you identify missing values? How are you going to deal with them (imputation, dropping rows, etc.)?
 - [ ] Did you make univariate plots (histograms, density plots, boxplots)?
 - [ ] Did you consider correlations between variables (scatterplots)?
 - [ ] Did you check the units of all data points to make sure they are in the right range?
