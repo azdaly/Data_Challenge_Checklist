@@ -37,7 +37,7 @@ df.sample(50) # generates a random sample of 50 rows. Useful for checking your o
 ### Helpful functions:
 ```python
 # Use assert statements to check whether there are any nulls left in specified columns:
-for colname in ['a','b','c']:
+for colname in df.columns:
 	assert df.loc[df[colname].isnull()].shape[0]==0, 'Error! Nulls in {}'.format(colname)
 ```
 
@@ -50,6 +50,12 @@ for colname in ['a','b','c']:
 - [ ] Did you try to identify any errors or miscoding of variables?
 - [ ] Did you consider plotting on a log scale?
 - [ ] Would a different type of plot (scatter maybe) be more informative?
+
+### Helpful functions and packages:
+[Pandas profiling](https://github.com/pandas-profiling/pandas-profiling) shows the distribution or proportion of every column, correlation across every column, missing values, duplicate rows, and other important statistics
+```python
+profile = ProfileReport(df, title='Pandas Profiling Report')
+```
 
 ## 5. Inference
 
