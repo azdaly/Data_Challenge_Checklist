@@ -63,7 +63,7 @@
 - [ ] Is the font size large enough to read?
 - [ ] Does every figure have a detailed caption that explains all axes, legends, and trends in the figure?
 
-## 8. Written analyses -- if required
+## 9. Written analyses -- if required
 
 - [ ] Did you describe the question of interest?
 - [ ] Did you describe the data set, experimental design, and question you are answering?
