@@ -59,12 +59,37 @@ for colname in df.columns:
 - [ ] Did you try to identify any errors or miscoding of variables?
 - [ ] Did you consider plotting on a log scale?
 - [ ] Would a different type of plot (scatter maybe) be more informative?
+- [ ] Did you check for data imbalances?
 
 ### Helpful functions and packages:
 [Pandas profiling](https://github.com/pandas-profiling/pandas-profiling) shows the distribution or proportion of every column, correlation across every column, missing values, duplicate rows, and other important statistics
 ```python
 profile = ProfileReport(df, title='Pandas Profiling Report')
 ```
+Here is a simple way to upscale/downscale imbalanced data for training
+```python
+# Separate majority and minority classes
+df_majority = df[df['TARGET']==1]
+df_minority = df[df['TARGET']==0]
+
+# Downsample Majority Class
+df_majority_dsampled = resample(df_majority, 
+                                 replace=False, # sample without replacement
+                                 n_samples=len(df_minority)) # to match minority class
+ 
+# Combine minority class with downsampled majority class
+df_dsampled = pd.concat([df_minority, df_majority_dsampled])
+ 
+# Upsample minority class
+df_minority_upsampled = resample(df_minority, 
+                                 replace=True,     # sample with replacement
+                                 n_samples=len(df_majority))    # to match majority class
+ 
+# Combine majority class with upsampled minority class
+df_upsampled = pd.concat([df_majority, df_minority_upsampled])
+```
+
+
 
 ## 5. Inference
 
