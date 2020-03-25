@@ -98,6 +98,22 @@ profile = ProfileReport(df, title='Pandas Profiling Report')
 	- sns.set(font_scale = 1.5)
 - [ ] Does every figure have a detailed caption that explains all axes, legends, and trends in the figure?
 
+### Helpful functions and packages:
+This produces a more stylistically pleasing plot
+```python
+from matplotlib import cycler
+colors = cycler('color',
+                ['#EE6666', '#3388BB', '#9988DD',
+                 '#EECC55', '#88BB44', '#FFBBBB'])
+plt.rc('axes', facecolor='#E6E6E6', edgecolor='none',
+       axisbelow=True, grid=True, prop_cycle=colors)
+plt.rc('grid', color='w', linestyle='solid')
+plt.rc('xtick', direction='out', color='gray')
+plt.rc('ytick', direction='out', color='gray')
+plt.rc('patch', edgecolor='#E6E6E6')
+plt.rc('lines', linewidth=2)
+```
+
 ## 9. Written analyses -- if required
 
 - [ ] Did you describe the question of interest?
