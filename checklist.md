@@ -7,6 +7,7 @@
 - [ ] Did you understand the context for the question and the scientific or business application?
 - [ ] Did you record the experimental design?
 - [ ] Did you consider whether the question could be answered with the available data?
+- [ ] Do you have an idea of what sort of modeling you need to do (in a broad sense)? See [sklearn's machine learning map](https://scikit-learn.org/stable/tutorial/machine_learning_map/index.html) if you need ideas.
 - [ ] What is the end deliverable going to look like (e.g., jupyter notebook, slides, deployable code)?
 
 ##  2. Checking the Data
