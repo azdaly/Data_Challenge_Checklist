@@ -7,6 +7,7 @@
 - [ ] Did you understand the context for the question and the scientific or business application?
 - [ ] Did you record the experimental design?
 - [ ] Did you consider whether the question could be answered with the available data?
+- [ ] Do you have an idea of what sort of modeling you need to do (in a broad sense)? See [sklearn's machine learning map](https://scikit-learn.org/stable/tutorial/machine_learning_map/index.html) if you need ideas.
 - [ ] What is the end deliverable going to look like (e.g., jupyter notebook, slides, deployable code)?
 
 ##  2. Checking the Data
@@ -138,8 +139,17 @@ plt.rc('ytick', direction='out', color='gray')
 plt.rc('patch', edgecolor='#E6E6E6')
 plt.rc('lines', linewidth=2)
 ```
+## 9. Putting the final touches on your notebook deliverable -- if required.
 
-## 9. Written analyses -- if required
+- [ ] Restart your kernel and run each cell in order, does your notebook still work?
+- [ ] Re-read your notebook from start to finish. It is a stand-alone document that makes sense?
+- [ ] Does your introduction to your notebook describe the problem briefly and accurately capture the process you ended up taking?
+- [ ] Before each major code block, is there a markdown cell describing your process in plain, simple english?
+- [ ] Is your code clear, concise and readable?
+- [ ] Look back at your code, are there opportunities to refactor things into reusable functions (with docstrings?)?
+- [ ] Do you describe the output of your model and let the reader know your conclusions?
+
+## 10. Written analyses -- if required
 
 - [ ] Did you describe the question of interest?
 - [ ] Did you describe the data set, experimental design, and question you are answering?
@@ -148,7 +158,7 @@ plt.rc('lines', linewidth=2)
 - [ ] Did you explain on the scale of interest what each estimate and measure of uncertainty means?
 - [ ] Did you report a measure of uncertainty for each estimate on the scientific scale?
 
-## 10. Presentations -- if required
+## 11. Presentations -- if required
 
 - [ ] Did you lead with a brief, understandable to everyone statement of your problem?
 - [ ] Did you explain the data, measurement technology, and experimental design before you explained your model?
